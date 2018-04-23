@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
 
-import DailyForecast from './dailyForecastItem'
+import './weeklyForecast.css'
 
-export default class WeeklyForecast extends Component {
-  render() {
+const WeeklyForecast =(props)=> {
+    console.log(props.day)
     return (
       <div>
-        <DailyForecast/>
+     <p>{props.day.date.weekday_short}</p> 
+     <span>
+        <img src={props.day.icon_url} />
+      </span>
+      <p>{props.day.high.celsius}-{props.day.low.celsius}&deg;</p>
+      
+      
       </div>
     )
-  }
 }
+
+export default WeeklyForecast

@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const DailyForecastItem = () => {
+const DailyForecastItem = props => {
+  console.log(props);
   return (
-    
-      <div>
-      <span><img src='http://icons.wxug.com/i/c/k/partlycloudy.gif'/></span>
+    <div>
+      <span>
+        <img src="http://icons.wxug.com/i/c/k/partlycloudy.gif" />
+      </span>
     </div>
-  )
-}
+  );
+};
 
-export default DailyForecastItem
+export default DailyForecastItem;
